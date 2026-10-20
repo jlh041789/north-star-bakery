@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact and Preorders | North Star Bakery</title>
+<link href="styles.css" rel="stylesheet"/><script defer="" src="script.js"></script></head>
+<body>
+<header class="site-header">
+<img alt="North Star Bakery logo" class="brand-logo" src="media/bakery-logo.png" width="180"/>
+<nav aria-label="Main navigation">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="products.html">Our Products</a></li>
+<li><a href="about.html">About the Bakery</a></li>
+<li><a aria-current="page" href="contact.html">Contact and Preorders</a></li>
+</ul>
+</nav>
+</header>
+<main class="container">
+<h1>Contact North Star Bakery</h1>
+<p>Planning a celebration or hoping to reserve your favorite loaf? Send a
+      request below. Submitting a request does not confirm an order.</p>
+<section class="panel">
+<h2>Preorder and Inquiry Form</h2>
+<form action="#" class="contact-form" id="preorder-form" method="post" novalidate="novalidate">
+<fieldset>
+<legend>Your Contact Information</legend>
+<p><label for="full-name">Full name (required)</label>
+<input aria-describedby="full-name-error" aria-invalid="false" autocomplete="name" id="full-name" minlength="2" name="full_name" required="" type="text"/><span aria-live="polite" class="field-error" id="full-name-error"></span></p>
+<p><label for="email">Email address (required)</label>
+<input aria-describedby="email-error" aria-invalid="false" autocomplete="email" id="email" name="email" required="" type="email"/><span aria-live="polite" class="field-error" id="email-error"></span></p>
+</fieldset>
+<fieldset>
+<legend>Tell Us About Your Request</legend>
+<p><label for="request-type">Request type (required)</label>
+<select aria-describedby="request-type-error" aria-invalid="false" id="request-type" name="request_type" required="">
+<option value="">Choose a request type</option>
+<option value="preorder">Preorder</option>
+<option value="question">General question</option>
+</select><span aria-live="polite" class="field-error" id="request-type-error"></span></p>
+<p><label for="pickup-date">Preferred pickup date</label>
+<input id="pickup-date" name="pickup_date" type="date"/></p>
+<p aria-live="polite" class="small-note" id="saved-favorites-note" role="status"></p><p><label for="item-details">Item details (required)</label>
+<textarea aria-describedby="item-details-error" aria-invalid="false" id="item-details" minlength="10" name="item_details" placeholder="Tell us the item and quantity, or ask your question." required="" rows="5"></textarea><span aria-live="polite" class="field-error" id="item-details-error"></span></p>
+<p><label for="allergy-notes">Allergy notes (if applicable)</label>
+<textarea id="allergy-notes" name="allergy_notes" placeholder="Share any ingredients or allergies to discuss." rows="3"></textarea></p>
+</fieldset>
+<button type="submit">Send Request</button>
+<button type="reset">Clear Form</button>
+</form><p aria-live="polite" class="form-message" id="form-message" role="status"></p>
+<p>This is a demonstration inquiry form. Nothing is sent to the bakery or stored on a server.</p>
+</section>
+<section class="panel">
+<h2>Location and Hours</h2>
+<p>North Star Bakery serves its local neighborhood. Please request our
+        current street address before visiting.</p>
+<p>Sample hours: Monday-Friday, 7 a.m.-5 p.m.; Saturday, 8 a.m.-3 p.m.;
+        Sunday, closed. Hours and location should be confirmed with the bakery.</p>
+</section>
+</main>
+<footer class="site-footer">
+<p>© 2026 North Star Bakery. Baked with care for our neighbors.</p>
+<p><a href="contact.html">Ask a question or request a preorder</a></p>
+</footer>
+</body>
+</html>

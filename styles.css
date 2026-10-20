@@ -1,0 +1,64 @@
+/* North Star Bakery | Touchstone 3 — mobile-first, shared design system */
+:root { --cream:#FFF9F0; --espresso:#34261E; --rust:#A3432F; --sage:#55705A; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--cream); color:var(--espresso); font-family:Arial,Helvetica,sans-serif; font-size:1rem; line-height:1.65; }
+a { color:var(--rust); text-underline-offset:.2em; }
+a:hover { color:var(--sage); }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline:3px solid var(--sage); outline-offset:3px; }
+.site-header { padding:1rem max(1rem,calc((100vw - 1100px)/2)); display:flex; flex-direction:column; align-items:center; gap:.6rem; background:var(--espresso); color:var(--cream); }
+.brand-logo { display:block; max-width:150px; height:auto; }
+nav { width:100%; }
+nav ul { display:flex; flex-direction:column; align-items:stretch; gap:.3rem; padding:0; margin:0; list-style:none; }
+nav a { display:block; padding:.65rem .9rem; color:var(--cream); text-align:center; font-weight:700; text-decoration:none; border-radius:.5rem; }
+nav a:hover, nav a:focus-visible, nav a[aria-current=page] { background:var(--sage); color:var(--cream); }
+.container { max-width:1100px; margin:auto; padding:2rem 1rem 3rem; }
+h1,h2,h3 { font-family:Georgia,'Times New Roman',serif; line-height:1.2; margin:0 0 .8rem; }
+h1 { font-size:clamp(2rem,5vw,3.4rem); }
+h2 { font-size:clamp(1.45rem,3vw,2rem); color:var(--rust); }
+h3 { font-size:1.25rem; }
+main>p:first-of-type { max-width:760px; font-size:1.1rem; }
+main>img, picture img, figure img, section>img, video { display:block; width:100%; max-width:100%; height:auto; border-radius:.7rem; }
+main>img { max-height:430px; object-fit:cover; margin:1.25rem 0; }
+main { display:flex; flex-direction:column; gap:1rem; }
+.panel { padding:1.3rem; border:1px solid #D8CFC1; border-radius:.85rem; background:#FFFDF9; box-shadow:0 3px 16px #34261E0C; }
+.panel p:last-child { margin-bottom:0; }
+figure { margin:1rem 0; }
+figcaption { padding:.6rem 0; font-size:.9rem; font-style:italic; }
+video { background:var(--espresso); max-width:760px; }
+.contact-form { display:flex; flex-direction:column; gap:1rem; }
+fieldset { min-width:0; padding:1rem; border:1px solid var(--sage); border-radius:.65rem; }
+legend { padding:0 .45rem; color:var(--espresso); font-weight:700; }
+label { display:block; font-weight:700; margin-bottom:.3rem; }
+input, textarea, select { display:block; width:100%; padding:.75rem; font:inherit; color:var(--espresso); background:white; border:1px solid var(--sage); border-radius:.4rem; }
+textarea { resize:vertical; }
+button { cursor:pointer; padding:.8rem 1.2rem; border:2px solid var(--rust); border-radius:.5rem; background:var(--rust); color:white; font:700 1rem Arial,Helvetica,sans-serif; }
+button[type=reset] { background:transparent; color:var(--rust); }
+button:hover { filter:brightness(.92); }
+.site-footer { background:var(--espresso); color:var(--cream); padding:1.5rem 1rem; text-align:center; }
+.site-footer a { color:var(--cream); }
+@media (min-width:720px) {
+ .site-header { flex-direction:row; justify-content:space-between; gap:1.5rem; }
+ nav { width:auto; }
+ nav ul { flex-direction:row; flex-wrap:wrap; justify-content:flex-end; gap:.3rem; }
+ .container { padding:3rem 1.75rem 4rem; }
+ .panel { padding:2rem; }
+ .contact-form { max-width:760px; }
+ .contact-form fieldset { padding:1.4rem; }
+}
+@media (max-width:360px) { .container { padding-inline:.75rem; } .panel { padding:1rem; } }
+@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+
+/* Touchstone 4: accessible favorites and form feedback */
+.favorite-options,.favorite-actions{display:flex;flex-direction:column;gap:.75rem;margin:1rem 0}
+.favorite-button{background:var(--cream);color:var(--espresso);border:2px solid var(--sage);text-align:left}
+.favorite-button[aria-pressed="true"]{background:var(--sage);color:white}
+.favorite-summary{font-weight:700}
+.action-link{display:inline-block;padding:.75rem 1.1rem;background:var(--rust);color:white;border-radius:.5rem;font-weight:700;text-decoration:none;text-align:center}
+.action-link:hover{color:white;filter:brightness(.92)}
+.secondary-button{background:transparent;color:var(--rust)}
+.small-note{font-size:.9rem}
+.field-error{display:block;min-height:1.15em;margin-top:.3rem;font-size:.9rem;font-weight:700;color:#8C2F20}
+[aria-invalid="true"]{border:2px solid #8C2F20}
+.form-message{font-weight:700}
+@media(min-width:720px){.favorite-options,.favorite-actions{flex-direction:row;flex-wrap:wrap}.favorite-options>*{flex:1}}
